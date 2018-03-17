@@ -4,10 +4,12 @@ angular.module('mainController', [])
         $scope.user_data = {}
 
         $scope.postName = function(){
-            console.log($scope.user_data)
-
-            $http.post('/users/', $scope.user_data).success(function(result) {
-                return callback(result)
-            })
+            if(!$scope.user_data.first_name || !$scope.user_data.last_name) {}
+            else{
+                console.log("sent")
+                $http.post('/users/', $scope.user_data).success(function (result) {
+                    return callback(result)
+                })
+            }
         }
     }])
