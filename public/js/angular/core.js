@@ -1,0 +1,1 @@
+angular.module('BDC-app', ['mainController', 'templateService']);
