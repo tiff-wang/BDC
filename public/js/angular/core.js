@@ -1,1 +1,1 @@
-angular.module('BDC-app', ['mainController', 'templateService']);
+angular.module('BDC-app', ['mainController']);

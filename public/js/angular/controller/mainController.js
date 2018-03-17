@@ -1,13 +1,15 @@
 angular.module('mainController', [])
-    .controller('templateController', ['$scope','$http','TemplateService', function($scope, $http, TemplateService) {
+    .controller('mainController', ['$scope','$http', function($scope, $http) {
 
-        $scope.test = "tiffany"
+        $scope.user_data = {}
 
-        $scope.function = function(arg){
-            return arg;
+        $scope.postName = function(){
+            if(!$scope.user_data.first_name || !$scope.user_data.last_name) {}
+            else{
+                console.log("sent")
+                $http.post('/users/', $scope.user_data).success(function (result) {
+                    return callback(result)
+                })
+            }
         }
     }])
-
-myFunction = function myFunction(){
-
-}
