@@ -35,39 +35,11 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="loginController">
-	<div class="limiter">
-		<div class="container-login100">
-			<div class="wrap-login100 p-t-85 p-b-20">
-				<form class="login100-form validate-form">
-						<span class="login100-form-title p-b-70">
-							Welcome
-						</span>
-					<span class="login100-form-avatar">
-							<img src="img/frank.png" alt="AVATAR">
-						</span>
 
-					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = " ">
-						<input class="input100" type="text" name="first_name" ng-model="user_data.first_name">
-						<span class="focus-input100" data-placeholder="First Name"></span>
-					</div>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top">
 
 
-					<div class="wrap-input100 validate-input m-b-50" data-validate=" ">
-						<input class="input100" type="text" name="last_name" ng-model="user_data.last_name">
-						<span class="focus-input100" data-placeholder="Last Name"></span>
-					</div>
-
-					<div class="container-login100-form-btn">
-						<button class="login100-form-btn" ng-click="postName()">
-							Login
-						</button>
-					</div>
-				</form>
-			</div>
-		</div>
-	</div>
-
+	<div ng-view></div>
 
 
 	<!-- jQuery -->
@@ -76,16 +48,12 @@
 	<script src="js/bootstrap.min.js"></script>
 	<!-- Plugin JavaScript -->
 	<script src="js/jquery.easing.min.js"></script>
-	<!-- Custom Theme JavaScript -->
-	<script src="js/login.js"></script>
 	<!--Exporting JavaScript-->
 	<script src="js/exportWebsite.js"></script>
 
 	<script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASZ7feZgsR1J-nPR2WNePQmHAjc9Zsve8">
 	</script>
-
-
 
 </body>
 </html>
