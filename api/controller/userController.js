@@ -54,6 +54,10 @@ function determineStrengthArea(patient, callback) {
     })
 }
 
+function determineWorkout(user, callback) {
+
+}
+
 module.exports = {
 
     getPatientData: function(req, callback) {
