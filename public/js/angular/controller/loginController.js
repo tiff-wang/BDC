@@ -1,5 +1,5 @@
 angular.module('loginController', [])
-    .controller('loginController', ['$scope','$http', function($scope, $http) {
+    .controller('loginController', ['$scope','$http', '$location', function($scope, $http, $location) {
 
         $scope.user_data = {}
 
@@ -7,9 +7,13 @@ angular.module('loginController', [])
             if(!$scope.user_data.first_name || !$scope.user_data.last_name) {}
             else{
                 console.log("sent")
-                $http.post('/user/', $scope.user_data).success(function (result) {
-                    console.log(result)
-
+                $http.post('/user/', $scope.user_data).then(function (result) {
+                    if(result.user_found){
+                        $location.path("/dashboard")
+                    }
+                    else{
+                        $(".user-not-found").css('visibility', 'visible')
+                    }
                 })
             }
         }
