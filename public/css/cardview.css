@@ -66,8 +66,10 @@ hr {
     /*background: black;*/
     background-image: url('https://i5.walmartimages.com/asr/a09fa18a-875b-4717-9001-a00851140c1f_1.af8d85594df7e4d529aa87529b6cfe17.jpeg');
     background-position: center;
-    width: 250px;
-    height: 250px;
+    background-size: cover;
+    width: 100%;
+    padding-top: 100%;
+    /*height: 250px;*/
     overflow: hidden;
     border-radius: 50%;
 }
