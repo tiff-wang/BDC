@@ -7,28 +7,36 @@ var user = {}
 function determineDirectPainMapping(patient, callback) {
     var musclePain = false
     var jointPain = false
-    async.each(patient.phenotypes, function (phenotype, callback) {
-        if (Phenotypes.MUSCLE_PAIN.includes(phenotype)) {
-            musclePain = true
-        }
-        if (Phenotypes.JOINT_PAIN.includes(phenotype)) {
-            jointPain = true
-        }
-        return callback()
-    }, function (err) {
-        if (musclePain) {
-            return callback('muscle')
-        } else if (jointPain) {
-            return callback('joint')
-        } else {
-            return callback(null)
-        }
-    })
+    if(patient.hasOwnProperty('phenotypes')){
+        async.each(patient.phenotypes, function (phenotype, callback) {
+            if (Phenotypes.MUSCLE_PAIN.includes(phenotype)) {
+                musclePain = true
+            }
+            if (Phenotypes.JOINT_PAIN.includes(phenotype)) {
+                jointPain = true
+            }
+            return callback()
+        }, function (err) {
+            if (musclePain) {
+                return callback('muscle')
+            } else if (jointPain) {
+                return callback('joint')
+            } else {
+                return callback(null)
+            }
+        })
+    } else {
+        return callback(null)
+    }
 }
 
 function determineDirectStrengthMapping(patient, callback) {
-    if (patient.phenotypes.includes(Phenotypes.STRONG_UPPER)) {
-        return callback('upper')
+    if(patient.hasOwnProperty('phenotypes')) {
+        if (patient.phenotypes.includes(Phenotypes.STRONG_UPPER)) {
+            return callback('upper')
+        } else {
+            return callback(null)
+        }
     } else {
         return callback(null)
     }
