@@ -1,13 +1,19 @@
 <!DOCTYPE html>
+<head>
+    <!-- Bootstrap Core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="css/theme.css" rel="stylesheet">
+    <link href="css/util.css" rel="stylesheet">
+    <link href="css/login.css" rel="stylesheet">
+</head>
+
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="loginController">
 <div class="limiter">
     <div class="container-login100">
         <div class="wrap-login100 p-t-85 p-b-20">
             <form class="login100-form validate-form">
-						<span class="login100-form-title p-b-70">
-							Welcome
-						</span>
                 <span class="login100-form-avatar">
 							<img src="img/frank.png" alt="AVATAR">
 						</span>
@@ -21,6 +27,11 @@
                 <div class="wrap-input100 validate-input m-b-50" data-validate=" ">
                     <input class="input100" type="text" name="last_name" ng-model="user_data.last_name">
                     <span class="focus-input100" data-placeholder="Last Name"></span>
+                </div>
+
+
+                <div class="user-not-found">
+                    <p>Sorry your profile wasn't found</p>
                 </div>
 
                 <div class="container-login100-form-btn">
