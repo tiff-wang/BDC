@@ -168,8 +168,8 @@ iframe {
 
 .login100-form-avatar {
   display: block;
-  width: 120px;
-  height: 120px;
+  width: 200px;
+  height: 200px;
   border-radius: 50%;
   overflow: hidden;
   margin: 0 auto;
@@ -414,4 +414,17 @@ iframe {
   -o-transform: translateY(-50%);
   transform: translateY(-50%);
   left: 0;
+}
+
+
+/*//////////////////////////////////////////////////////////////////
+[ User Not Found ]*/
+
+.user-not-found{
+  visibility: hidden;
+}
+
+.user-not-found p{
+  padding: 0.2em;
+  color: red;
 }
