@@ -18,13 +18,31 @@
 	<div style="background-color: rgba(0, 0, 0, 0.6); min-height:100em;">
 	<header id="header">
 		<div class="container header-container clearfix">
-			<div class="dash">Your Workout Plan</div>
+			<div class="dash"><span style="color:white; font-weight: 700"> thicc<span style="color:#ff4d4d">.ai</span></span></div>
 			<div class="pname">Hi {{first_name}} {{last_name}}</div>
 		</div>
 	</header>
 	<!-- Grid layout -->
 	<div class="container p-t-35">
 		<div class="row">
+
+			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 card">
+				<div class="thumbnail">
+					<div class="caption">
+						<h3>
+							Your profile
+						</h3>
+						<hr>
+						<div class="daylist" id="yourinfo">
+							<p style="text-align: left; font-size: 1em; color: #dddddd"> <strong>Hi {{first_name}} {{last_name}} <br> </strong>
+								This workout plan has been specifically tailored to your strength and weaknesses. Your DNA suggested that you have {{pain_area}} pain and a strong {{strength_area}} body.
+								This plan focuses on your weaknesses while not forgetting about your strength. Happy workout!
+							</p>
+						</div>
+						<!-- <button class="btn btn-default" role="button">View More</button> -->
+					</div>
+				</div>
+			</div>
 
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 card">
 				<div class="thumbnail">
@@ -123,6 +141,10 @@
 				</div>
 			</div>
 
+		</div>
+
+		<div class="row">
+
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 card">
 				<div class="thumbnail">
 					<div class="caption">
@@ -132,15 +154,14 @@
 						<hr>
 						<div class="daylist">
 							<strong style="color: #DDDDDD"> REST DAY </strong>
+							<p style="text-align: left; font-size: 1em; color: #dddddd"> <br>
+								You've worked hard! Get a good night's sleep and recover.
+							</p>
 						</div>
 						<!-- <button class="btn btn-default" role="button">View More</button> -->
 					</div>
 				</div>
 			</div>
-
-		</div>
-
-		<div class="row">
 
 			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 card">
 				<div class="thumbnail">
@@ -213,23 +234,8 @@
 						<hr>
 						<div class="daylist">
 							<strong style="color: #DDDDDD"> REST DAY </strong>
-						</div>
-						<!-- <button class="btn btn-default" role="button">View More</button> -->
-					</div>
-				</div>
-			</div>
-
-			<div class="col-xs-12 col-sm-6 col-md-3 col-lg-3 card">
-				<div class="thumbnail">
-					<div class="caption">
-						<h3>
-							Your profile
-						</h3>
-						<hr>
-						<div class="daylist" id="yourinfo">
-							<p style="text-align: left; font-size: 1em; color: #dddddd"> <strong>Hi {{first_name}} {{last_name}} <br> </strong>
-							This workout plan has been specifically tailored to your strength and weaknesses. Your DNA suggested that you have {{pain_area}} pain and a strong {{strength_area}} body.
-								This plan focuses on your weaknesses while not forgetting about your strength. Happy workout!
+							<p style="text-align: left; font-size: 1em; color: #dddddd"> <br>
+								Last day of the week. You deserve a break. Use this day to set yourself up for a new week!
 							</p>
 						</div>
 						<!-- <button class="btn btn-default" role="button">View More</button> -->
