@@ -73,7 +73,7 @@ function determineWorkout(user, callback) {
     if (user.strength_area == 'upper') {
         workout.workout = Workouts.workouts.workout.upper_strong
     } else {
-        workout.workout = Workouts.workouts.stretch.lower_strong
+        workout.workout = Workouts.workouts.workout.lower_strong
     }
     workout.cardio = Workouts.workouts.cardio
     return callback(workout)
