@@ -26,12 +26,43 @@
 	<!-- Angular -->
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 	<script src="js/angular/controller/mainController.js"></script>
-	<script src="js/angular/service/templateService.js"></script>
+	<script src="js/angular/service/LoginService.js"></script>
 	<script src="js/angular/core.js"></script>
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="templateController">
-	<p style="color:black">Working template: {{test}}</p>
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="mainController">
+	<div class="limiter">
+		<div class="container-login100">
+			<div class="wrap-login100 p-t-85 p-b-20">
+				<form class="login100-form validate-form">
+						<span class="login100-form-title p-b-70">
+							Welcome
+						</span>
+					<span class="login100-form-avatar">
+							<img src="img/frank.png" alt="AVATAR">
+						</span>
+
+					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
+						<input class="input100" type="text" ng-model="user_data.first_name">
+						<span class="focus-input100" data-placeholder="Name"></span>
+					</div>
+
+					Name: <input ng-model="name">
+
+					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
+						<input class="input100" type="text" ng-model="user_data.last_name">
+						<span class="focus-input100" data-placeholder="Password"></span>
+					</div>
+
+					<div class="container-login100-form-btn">
+						<button class="login100-form-btn" ng-click="postName()">
+							Login
+						</button>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
 
 
 
