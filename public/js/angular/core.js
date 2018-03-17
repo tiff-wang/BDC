@@ -5,5 +5,9 @@ angular.module('BDC-app', ['loginController', 'dashboardController', 'ngRoute'])
                 templateUrl : "login.html",
                 controller: 'loginController'
             })
-            .otherwise({redirectTo:'/'})
-    });
+            .when("/dashboard", {
+                templateUrl: "dashboard.html",
+                controller: 'dashboardController'
+            })
+            .otherwise({redirectTo:'/login'});
+    })
