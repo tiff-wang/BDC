@@ -1,5 +1,5 @@
 angular.module('loginController', [])
-    .controller('loginController', ['$scope','$http', '$location', function($scope, $http, $location) {
+    .controller('loginController', ['$scope','$http', '$location', 'sharedProperties', function($scope, $http, $location, sharedProperties) {
 
         $scope.user_data = {}
 
@@ -8,8 +8,10 @@ angular.module('loginController', [])
             else{
                 console.log("sent")
                 $http.post('/user/', $scope.user_data).then(function (result) {
-                    if(result.user_found){
+                    console.log(result)
+                    if(result.data.user_found){
                         $location.path("/dashboard")
+                        sharedProperties.setProperty(result.data.user)
                     }
                     else{
                         $(".user-not-found").css('visibility', 'visible')
@@ -84,3 +86,4 @@ function hideValidate(input) {
     var thisAlert = $(input).parent();
     $(thisAlert).removeClass('alert-validate');
 }
+
