@@ -1,5 +1,4 @@
 //set up the server
-
 var express = require('express')
 var app = express()
 var port = process.env.PORT || 5000
@@ -28,6 +27,7 @@ var env = require('dotenv')
 env.config()
 
 // routes ======================================================================
+require('./routes/userRoute')(app)
 
 // listen (start app with node server.js) ======================================
 app.listen(port);
