@@ -14,11 +14,11 @@
 
 </head>
 
-<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="templateController">
-
+<body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="dashboardController">
+	<div style="background-color: rgba(0, 0, 0, 0.6)">
 	<header id="header">
 		<div class="container header-container clearfix">
-			<div class="dash">Your Workout PLan</div>
+			<div class="dash">Your Workout Plan</div>
 			<div class="pname">Hi {{first_name}} {{last_name}}</div>
 		</div>
 	</header>
@@ -34,21 +34,21 @@
 								Monday
 							</h3>
 						</div>
-						<hr>
+						<hr style="color: #DDDDDD">
 						<div class="daylist">
 							<ul>
 								<li class='preworkout'><strong>Preworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.stretch.monday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.stretch.monday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='workout'><strong>Workout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.workout.monday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.workout.monday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='postworkout'><strong>Postworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.cardio.monday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.cardio.monday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
@@ -71,17 +71,17 @@
 						<div class="daylist">
 							<ul>
 								<li class='preworkout'><strong>Preworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.stretch.tuesday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.stretch.tuesday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='workout'><strong>Workout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.workout.tuesday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.workout.tuesday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='postworkout'><strong>Postworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.cardio.tuesday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.cardio.tuesday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
@@ -102,17 +102,17 @@
 						<div class="daylist">
 							<ul>
 								<li class='preworkout'><strong>Preworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.stretch.wednesday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.stretch.wednesday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='workout'><strong>Workout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.workout.wednesday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.workout.wednesday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='postworkout'><strong>Postworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.cardio.wednesday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.cardio.wednesday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
@@ -131,7 +131,7 @@
 						</h3>
 						<hr>
 						<div class="daylist">
-							<strong> REST DAY </strong>
+							<strong style="color: #DDDDDD"> REST DAY </strong>
 						</div>
 						<!-- <button class="btn btn-default" role="button">View More</button> -->
 					</div>
@@ -152,17 +152,17 @@
 						<div class="daylist">
 							<ul>
 								<li class='preworkout'><strong>Preworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.stretch.friday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.stretch.friday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='workout'><strong>Workout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.workout.friday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.workout.friday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='postworkout'><strong>Postworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.cardio.friday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.cardio.friday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
@@ -183,17 +183,17 @@
 						<div class="daylist">
 							<ul>
 								<li class='preworkout'><strong>Preworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.stretch.saturday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.stretch.saturday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='workout'><strong>Workout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.workout.saturday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.workout.saturday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
 								<li class='postworkout'><strong>Postworkout</strong><br>
-									<ul style="list-style-type:circle; padding-left: 2em" ng-repeat="ex in workout.cardio.saturday">
+									<ul style="padding-left: 2em" ng-repeat="ex in workout.cardio.saturday">
 										<li>{{ex}}</li>
 									</ul>
 								</li>
@@ -212,7 +212,7 @@
 						</h3>
 						<hr>
 						<div class="daylist">
-							<strong> REST DAY </strong>
+							<strong style="color: #DDDDDD"> REST DAY </strong>
 						</div>
 						<!-- <button class="btn btn-default" role="button">View More</button> -->
 					</div>
@@ -223,16 +223,14 @@
 				<div class="thumbnail">
 					<div class="caption">
 						<h3>
-							Your Info
+							Your profile
 						</h3>
 						<hr>
 						<div class="daylist" id="yourinfo">
-							<div id="avatar" ></div>
-							<ul>
-								<li class='preworkout'><strong>Hi {{first_name}} {{last_name}}</strong></li>
-								<li class='workout'><strong>21</strong></li>
-								<li class='postworkout'><strong>Still single</strong></li>
-							</ul>
+							<p style="text-align: left; font-size: 1em; color: #dddddd"> <strong>Hi {{first_name}} {{last_name}} <br> </strong>
+							This workout plan has been specifically tailored to your strength and weaknesses. Your DNA suggested that you have {{pain_area}} pain and a strong {{strength_area}}.
+								This plan focuses on your weaknesses while not forgetting about your strength. Happy workout!
+							</p>
 						</div>
 						<!-- <button class="btn btn-default" role="button">View More</button> -->
 					</div>
@@ -241,6 +239,7 @@
 
 		</div>
 
+	</div>
 	</div>
 
 	<!-- jQuery -->
