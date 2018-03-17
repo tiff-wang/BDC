@@ -17,6 +17,8 @@
 	<link href="css/bootstrap.min.css" rel="stylesheet">
 	<!-- Custom CSS -->
 	<link href="css/theme.css" rel="stylesheet">
+	<link href="css/util.css" rel="stylesheet">
+	<link href="css/login.css" rel="stylesheet">
 	<!-- Custom Fonts -->
 	<link href="font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 	<link href="http://fonts.googleapis.com/css?family=Open+Sans:300,400,700,400italic,700italic" rel="stylesheet" type="text/css">
@@ -26,8 +28,8 @@
 	<!-- Angular -->
 	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
 	<script src="js/angular/controller/mainController.js"></script>
-	<script src="js/angular/service/LoginService.js"></script>
 	<script src="js/angular/core.js"></script>
+
 </head>
 
 <body id="page-top" data-spy="scroll" data-target=".navbar-fixed-top" ng-controller="mainController">
@@ -42,16 +44,15 @@
 							<img src="img/frank.png" alt="AVATAR">
 						</span>
 
-					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = "Enter username">
-						<input class="input100" type="text" ng-model="user_data.first_name">
-						<span class="focus-input100" data-placeholder="Name"></span>
+					<div class="wrap-input100 validate-input m-t-85 m-b-35" data-validate = " ">
+						<input class="input100" type="text" name="first_name" ng-model="user_data.first_name">
+						<span class="focus-input100" data-placeholder="First Name"></span>
 					</div>
 
-					Name: <input ng-model="name">
 
-					<div class="wrap-input100 validate-input m-b-50" data-validate="Enter password">
-						<input class="input100" type="text" ng-model="user_data.last_name">
-						<span class="focus-input100" data-placeholder="Password"></span>
+					<div class="wrap-input100 validate-input m-b-50" data-validate=" ">
+						<input class="input100" type="text" name="last_name" ng-model="user_data.last_name">
+						<span class="focus-input100" data-placeholder="Last Name"></span>
 					</div>
 
 					<div class="container-login100-form-btn">
@@ -74,6 +75,7 @@
 	<script src="js/jquery.easing.min.js"></script>
 	<!-- Custom Theme JavaScript -->
 	<script src="js/theme.js"></script>
+	<script src="js/login.js"></script>
 	<!--Validation JavaScript-->
 	<script src="js/validate.js"></script>
 	<!--Exporting JavaScript-->
@@ -82,6 +84,8 @@
 	<script async defer
 			src="https://maps.googleapis.com/maps/api/js?key=AIzaSyASZ7feZgsR1J-nPR2WNePQmHAjc9Zsve8">
 	</script>
+
+
 
 </body>
 </html>

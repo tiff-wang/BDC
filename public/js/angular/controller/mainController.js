@@ -4,7 +4,9 @@ angular.module('mainController', [])
         $scope.user_data = {}
 
         $scope.postName = function(){
-            $http.post('/users/',  data).success(function(result) {
+            console.log($scope.user_data)
+
+            $http.post('/users/', $scope.user_data).success(function(result) {
                 return callback(result)
             })
         }
