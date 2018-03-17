@@ -1,5 +1,5 @@
-angular.module('mainController', [])
-    .controller('mainController', ['$scope','$http', function($scope, $http) {
+angular.module('loginController', [])
+    .controller('loginController', ['$scope','$http', function($scope, $http) {
 
         $scope.user_data = {}
 

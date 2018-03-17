@@ -1,1 +1,1 @@
-angular.module('BDC-app', ['mainController']);
+angular.module('BDC-app', ['loginController', 'dashboardController']);
